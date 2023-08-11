@@ -5,20 +5,18 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Stacks And Queues Program");
-            LinkedListStack stack = new LinkedListStack();
-            stack.Push(70);
-            stack.Push(30);
-            stack.Push(56);
+            LinkedListQueue queue = new LinkedListQueue();
+            queue.Enqueue(56);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
 
-            Console.WriteLine("Peeking and popping from the stack until it's empty:");
+            Console.WriteLine("Front element of the queue: " + queue.Peek());
 
-            while (!stack.IsEmpty())
-            {
-                Console.WriteLine("Peek: " + stack.Peek());
-                Console.WriteLine("Pop: " + stack.Pop());
-            }
+            Console.WriteLine("Dequeued: " + queue.Dequeue());
+            Console.WriteLine("Dequeued: " + queue.Dequeue());
+            Console.WriteLine("Dequeued: " + queue.Dequeue());
+            Console.WriteLine("Is the queue empty? " + queue.IsEmpty());
 
-            Console.WriteLine("Stack is empty: " + stack.IsEmpty());    
         }
     }
 }
