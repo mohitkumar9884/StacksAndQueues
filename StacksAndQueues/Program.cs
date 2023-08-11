@@ -10,12 +10,15 @@
             stack.Push(30);
             stack.Push(56);
 
-            Console.WriteLine("Top element of the stack: " + stack.Peek());   
+            Console.WriteLine("Peeking and popping from the stack until it's empty:");
 
-            Console.WriteLine("Popped: " + stack.Pop());  
-            Console.WriteLine("Popped: " + stack.Pop());  
-            Console.WriteLine("Popped: " + stack.Pop());  
-            Console.WriteLine("Is the stack empty? " + stack.IsEmpty());  
+            while (!stack.IsEmpty())
+            {
+                Console.WriteLine("Peek: " + stack.Peek());
+                Console.WriteLine("Pop: " + stack.Pop());
+            }
+
+            Console.WriteLine("Stack is empty: " + stack.IsEmpty());    
         }
     }
 }
