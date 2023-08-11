@@ -45,16 +45,6 @@ namespace StacksAndQueues
             return data;
         }
 
-        public int Peek()
-        {
-            if (front == null)
-            {
-                throw new InvalidOperationException("Queue is empty.");
-            }
-
-            return front.Data;
-        }
-
         public bool IsEmpty()
         {
             return front == null;

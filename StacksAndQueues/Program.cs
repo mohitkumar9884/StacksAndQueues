@@ -10,11 +10,14 @@
             queue.Enqueue(30);
             queue.Enqueue(70);
 
-            Console.WriteLine("Front element of the queue: " + queue.Peek());
+            Console.WriteLine("Dequeuing from the beginning:");
 
-            Console.WriteLine("Dequeued: " + queue.Dequeue());
-            Console.WriteLine("Dequeued: " + queue.Dequeue());
-            Console.WriteLine("Dequeued: " + queue.Dequeue());
+            while (!queue.IsEmpty())
+            {
+                int dequeued = queue.Dequeue();
+                Console.WriteLine("Dequeued: " + dequeued);
+            }
+
             Console.WriteLine("Is the queue empty? " + queue.IsEmpty());
 
         }
